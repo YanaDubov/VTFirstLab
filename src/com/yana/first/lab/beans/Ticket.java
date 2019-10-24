@@ -1,5 +1,6 @@
 package com.yana.first.lab.beans;
 
+@Annotation(name = "Ticket")
 public class Ticket{
     public Ticket() {
     }

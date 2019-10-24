@@ -1,5 +1,6 @@
 package com.yana.first.lab.beans;
 
+@Annotation(name = "Pilot")
 public class Pilot extends Crew {
     public Pilot() {
     }

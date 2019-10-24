@@ -1,7 +1,6 @@
 package com.yana.first.lab.beans;
 
-import java.util.Date;
-
+@Annotation(name = "Plane")
 public class Plane {
     public Plane() {
     }

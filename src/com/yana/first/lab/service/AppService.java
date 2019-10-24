@@ -12,14 +12,6 @@ public class AppService {
 
     Map<Class, Dao> dao = new HashMap<>();
 
-    public AppService() {
-        dao.put(FlightAttendant.class, new FlightAttendantDao());
-        dao.put(Luggage.class,new LuggageDao());
-        dao.put(Passenger.class, new PassengerDao());
-        dao.put(Pilot.class, new PilotDao());
-        dao.put(Plane.class, new PlaneDao());
-        dao.put(Ticket.class, new TicketDao());
-    }
     public List getAll(Object o){
         return dao.get(o.getClass()).getAll();
     }
