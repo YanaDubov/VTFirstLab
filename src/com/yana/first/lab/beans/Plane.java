@@ -6,10 +6,15 @@ public class Plane {
     public Plane() {
     }
 
+    public Plane(int id, String model, int numberOfSeats) {
+        this.id = id;
+        this.model = model;
+        this.numberOfSeats = numberOfSeats;
+    }
+
     private int id;
     private String model;
     private int numberOfSeats;
-    private Date releaseDate;
 
     public int getId() {
         return id;
@@ -35,11 +40,7 @@ public class Plane {
         this.numberOfSeats = numberOfSeats;
     }
 
-    public Date getReleaseDate() {
-        return releaseDate;
-    }
-
-    public void setReleaseDate(Date releaseDate) {
-        this.releaseDate = releaseDate;
+    public String toString(){
+        return this.id + "/" + this.model + "/" + this.numberOfSeats;
     }
 }

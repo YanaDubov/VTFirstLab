@@ -4,6 +4,15 @@ public class Crew {
     public Crew() {
     }
 
+    public Crew(int id, String firstName, String lastName, String phoneNumber, String address, String contractNumber) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.contractNumber = contractNumber;
+    }
+
     private int id;
     private String firstName;
     private String lastName;
