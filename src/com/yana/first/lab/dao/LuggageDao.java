@@ -1,6 +1,5 @@
 package com.yana.first.lab.dao;
 
-import com.yana.first.lab.beans.FlightAttendant;
 import com.yana.first.lab.beans.Luggage;
 
 import java.io.*;
@@ -9,8 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class LuggageDao {
-    Map<Integer, Luggage> luggageMap = new HashMap<>();
+public class LuggageDao implements Dao<Luggage> {
+    private Map<Integer, Luggage> luggageMap = new HashMap<>();
 
     public LuggageDao() {
         try {

@@ -1,6 +1,6 @@
 package com.yana.first.lab.beans;
 
-public class Ticket {
+public class Ticket{
     public Ticket() {
     }
 
@@ -11,8 +11,8 @@ public class Ticket {
     }
 
     private int id;
-    Passenger passenger;
-    String number;
+    private Passenger passenger;
+    private String number;
 
     public int getId() {
         return id;

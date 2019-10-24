@@ -9,9 +9,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TicketDao {
-    Map<Integer, Ticket> tickets = new HashMap<>();
-    PassengerDao passengerDao;
+public class TicketDao implements Dao<Ticket> {
+    private Map<Integer, Ticket> tickets = new HashMap<>();
+    private PassengerDao passengerDao = new PassengerDao();
     public TicketDao() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("/Users/yana/Projects/VTFirstLab/resources/Ticket.txt"));

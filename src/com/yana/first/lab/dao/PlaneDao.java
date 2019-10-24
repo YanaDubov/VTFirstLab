@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PlaneDao {
-    Map<Integer, Plane> planes = new HashMap<>();
+public class PlaneDao implements Dao<Plane> {
+    private Map<Integer, Plane> planes = new HashMap<>();
 
     public PlaneDao() {
         try {

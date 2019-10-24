@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PassengerDao {
-    Map<Integer, Passenger> passengers = new HashMap<>();
+public class PassengerDao implements Dao<Passenger>{
+    private Map<Integer, Passenger> passengers = new HashMap<>();
 
     public PassengerDao() {
         try {

@@ -1,15 +1,13 @@
 package com.yana.first.lab.dao;
 
 import com.yana.first.lab.beans.FlightAttendant;
-import com.yana.first.lab.beans.Pilot;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FlightAttendantDao {
+public class FlightAttendantDao implements Dao<FlightAttendant>{
     Map<Integer, FlightAttendant> flightAttendants = new HashMap<>();
 
     public FlightAttendantDao() {
