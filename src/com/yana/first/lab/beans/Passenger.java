@@ -1,8 +1,7 @@
-package beans;
+package com.yana.first.lab.beans;
 
-import java.io.Serializable;
 
-public class Passenger implements Serializable {
+public class Passenger {
 
     public Passenger() {
     }
@@ -11,6 +10,7 @@ public class Passenger implements Serializable {
     private String lastName;
     private String dateOfBirth;
     private String pasportNumber;
+
 
     public String getFirstName() {
         return firstName;
