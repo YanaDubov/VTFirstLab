@@ -1,25 +1,27 @@
 package com.yana.first.lab.beans;
 
-@Annotation(name = "Ticket")
-public class Ticket{
+import javax.annotation.Resource;
+
+@Resource(name = "Ticket")
+public class Ticket {
     public Ticket() {
     }
 
-    public Ticket(int id, Passenger passenger, String number) {
+    public Ticket(Integer id, Passenger passenger, String number) {
         this.id = id;
         this.passenger = passenger;
         this.number = number;
     }
 
-    private int id;
+    private Integer id;
     private Passenger passenger;
     private String number;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -39,7 +41,7 @@ public class Ticket{
         this.number = number;
     }
 
-    public String toString(){
+    public String toString() {
         return this.id + "/" + this.passenger.getId() + "/" + this.number;
     }
 }

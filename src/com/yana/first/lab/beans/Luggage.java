@@ -1,35 +1,37 @@
 package com.yana.first.lab.beans;
 
-@Annotation(name = "Luggage")
+import javax.annotation.Resource;
+
+@Resource(name = "Luggage")
 public class Luggage {
     public Luggage() {
     }
 
-    public Luggage(int id, int weight) {
+    public Luggage(Integer id, Integer weight) {
         this.id = id;
         this.weight = weight;
     }
 
-    private int id;
-    private int weight;
+    private Integer id;
+    private Integer weight;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getWeight() {
+    public Integer getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(Integer weight) {
         this.weight = weight;
     }
 
-    public String toString(){
+    public String toString() {
         return this.id + "/" + this.weight;
     }
 }

@@ -1,25 +1,27 @@
 package com.yana.first.lab.beans;
 
-@Annotation(name = "Plane")
+import javax.annotation.Resource;
+
+@Resource(name = "Plane")
 public class Plane {
     public Plane() {
     }
 
-    public Plane(int id, String model, int numberOfSeats) {
+    public Plane(Integer id, String model, Integer numberOfSeats) {
         this.id = id;
         this.model = model;
         this.numberOfSeats = numberOfSeats;
     }
 
-    private int id;
+    private Integer id;
     private String model;
-    private int numberOfSeats;
+    private Integer numberOfSeats;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -31,15 +33,15 @@ public class Plane {
         this.model = model;
     }
 
-    public int getNumberOfSeats() {
+    public Integer getNumberOfSeats() {
         return numberOfSeats;
     }
 
-    public void setNumberOfSeats(int numberOfSeats) {
+    public void setNumberOfSeats(Integer numberOfSeats) {
         this.numberOfSeats = numberOfSeats;
     }
 
-    public String toString(){
+    public String toString() {
         return this.id + "/" + this.model + "/" + this.numberOfSeats;
     }
 }

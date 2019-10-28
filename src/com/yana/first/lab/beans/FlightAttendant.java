@@ -1,25 +1,28 @@
 package com.yana.first.lab.beans;
-@Annotation(name = "Flight attendant")
-public class FlightAttendant extends Crew{
+
+import javax.annotation.Resource;
+
+@Resource(name = "Flight attendant")
+public class FlightAttendant extends Crew {
     public FlightAttendant() {
     }
 
-    public FlightAttendant(int id, String firstName, String lastName, String phoneNumber, String address, String contractNumber, int yearsOfExperience) {
+    public FlightAttendant(Integer id, String firstName, String lastName, String phoneNumber, String address, String contractNumber, Integer yearsOfExperience) {
         super(id, firstName, lastName, phoneNumber, address, contractNumber);
         this.yearsOfExperience = yearsOfExperience;
     }
 
-    private int yearsOfExperience;
+    private Integer yearsOfExperience;
 
-    public int getYearsOfExperience() {
+    public Integer getYearsOfExperience() {
         return yearsOfExperience;
     }
 
-    public void setYearsOfExperiance(int yearsOfExperiance) {
+    public void setYearsOfExperiance(Integer yearsOfExperiance) {
         this.yearsOfExperience = yearsOfExperiance;
     }
 
-    public String toString(){
+    public String toString() {
         return this.getId() + "/" + this.getFirstName() + "/" + this.getLastName() + "/" + this.getPhoneNumber() + "/" + this.getAddress() + "/" + this.getContractNumber() + "/" + this.getYearsOfExperience();
     }
 }

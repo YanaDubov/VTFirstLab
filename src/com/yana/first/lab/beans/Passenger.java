@@ -1,31 +1,32 @@
 package com.yana.first.lab.beans;
 
-@Annotation(name = "Passenger")
+import javax.annotation.Resource;
+
+@Resource(name = "Passenger")
 public class Passenger {
 
     public Passenger() {
     }
 
-    public Passenger(int id, String firstName, String lastName, String dateOfBirth, String pasportNumber) {
+    public Passenger(Integer id, String firstName, String lastName, String dateOfBirth, String passportNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
-        this.pasportNumber = pasportNumber;
+        this.passportNumber = passportNumber;
     }
 
-    private int id;
+    private Integer id;
     private String firstName;
     private String lastName;
     private String dateOfBirth;
-    private String pasportNumber;
+    private String passportNumber;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -53,15 +54,15 @@ public class Passenger {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getPasportNumber() {
-        return pasportNumber;
+    public String getPassportNumber() {
+        return passportNumber;
     }
 
-    public void setPasportNumber(String pasportNumber) {
-        this.pasportNumber = pasportNumber;
+    public void setPassportNumber(String passportNumber) {
+        this.passportNumber = passportNumber;
     }
 
-    public String toString(){
-        return this.id + "/" + this.firstName + "/" + this.lastName + "/" + this.dateOfBirth + "/" + this.pasportNumber;
+    public String toString() {
+        return this.id + "/" + this.firstName + "/" + this.lastName + "/" + this.dateOfBirth + "/" + this.passportNumber;
     }
 }

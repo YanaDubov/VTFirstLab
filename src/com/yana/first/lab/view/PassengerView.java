@@ -1,14 +1,14 @@
 package com.yana.first.lab.view;
 
-import com.yana.first.lab.beans.FlightAttendant;
-import com.yana.first.lab.service.FlightAttendantService;
+import com.yana.first.lab.beans.Passenger;
+import com.yana.first.lab.service.PassengerService;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class FlightAttendantView implements ViewClass {
+public class PassengerView implements ViewClass {
 
-    FlightAttendantService service = new FlightAttendantService();
+    PassengerService service = new PassengerService();
     String menu = "Press:\n" +
             " 1 - to get list of all\n" +
             " 2 - to get\n" +
@@ -60,13 +60,13 @@ public class FlightAttendantView implements ViewClass {
         }
     }
 
-    private void getAll() {
+    public void getAll() {
         System.out.println("List of all flight attendants:");
-        List<FlightAttendant> flightAttendantList = service.getAll();
+        List<Passenger> flightAttendantList = service.getAll();
         flightAttendantList.forEach(this::printObj);
     }
 
-    private void getById() {
+    public void getById() {
         System.out.println("Enter id: ");
         String s = scan.next();
         int i = Integer.parseInt(s);
@@ -80,32 +80,26 @@ public class FlightAttendantView implements ViewClass {
         service.deleteById(i);
     }
 
-    private FlightAttendant scanObj() {
+    private Passenger scanObj() {
         System.out.println("ID: ");
         int id = Integer.parseInt(scan.next());
         System.out.println(" First name: ");
         String firstName = scan.next();
         System.out.println(" Last name: ");
         String lastName = scan.next();
-        System.out.println(" Phone number: ");
-        String phoneNumber = scan.next();
-        System.out.println(" Address: ");
-        String address = scan.next();
-        System.out.println(" Contract number: ");
-        String contractNumber = scan.next();
-        System.out.println(" Years of experience: ");
-        int yearsOfExperience = Integer.parseInt(scan.next());
-        return new FlightAttendant(id, firstName, lastName, phoneNumber, address, contractNumber, yearsOfExperience);
+        System.out.println(" Date of birth: ");
+        String date = scan.next();
+        System.out.println(" Passport number: ");
+        String passport = scan.next();
+        return new Passenger(id, firstName, lastName, date, passport);
     }
 
-    private void printObj(FlightAttendant flightAttendant) {
-        System.out.println("ID: " + flightAttendant.getId() +
-                " First name: " + flightAttendant.getFirstName() +
-                " Last name: " + flightAttendant.getLastName() +
-                " Phone number: " + flightAttendant.getPhoneNumber() +
-                " Address: " + flightAttendant.getAddress() +
-                " Contract number: " + flightAttendant.getPhoneNumber() +
-                " Years of experiance: " + flightAttendant.getYearsOfExperience());
+    public void printObj(Passenger passenger) {
+        System.out.println("ID: " + passenger.getId() +
+                " First name: " + passenger.getFirstName() +
+                " Last name: " + passenger.getLastName() +
+                " Date of birth: " + passenger.getDateOfBirth() +
+                " Passport number: " + passenger.getPassportNumber());
     }
 
     private void search() {

@@ -1,7 +1,5 @@
 package com.yana.first.lab.view;
 
-import java.util.List;
-
-public interface View {
+public interface ViewClass {
     public void menu();
 }

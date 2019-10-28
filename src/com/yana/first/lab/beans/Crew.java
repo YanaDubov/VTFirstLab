@@ -4,7 +4,7 @@ public class Crew {
     public Crew() {
     }
 
-    public Crew(int id, String firstName, String lastName, String phoneNumber, String address, String contractNumber) {
+    public Crew(Integer id, String firstName, String lastName, String phoneNumber, String address, String contractNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -13,18 +13,18 @@ public class Crew {
         this.contractNumber = contractNumber;
     }
 
-    private int id;
+    private Integer id;
     private String firstName;
     private String lastName;
     private String phoneNumber;
     private String address;
     private String contractNumber;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

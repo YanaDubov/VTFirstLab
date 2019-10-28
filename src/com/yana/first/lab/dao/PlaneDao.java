@@ -24,6 +24,7 @@ public class PlaneDao implements Dao<Plane> {
             e.printStackTrace();
         }
     }
+
     public List<Plane> getAll() {
         return new ArrayList<>(planes.values());
     }

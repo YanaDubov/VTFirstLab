@@ -1,11 +1,13 @@
 package com.yana.first.lab.beans;
 
-@Annotation(name = "Pilot")
+import javax.annotation.Resource;
+
+@Resource(name = "Pilot")
 public class Pilot extends Crew {
     public Pilot() {
     }
 
-    public Pilot(int id, String firstName, String lastName, String phoneNumber, String address, String contractNumber, String rank) {
+    public Pilot(Integer id, String firstName, String lastName, String phoneNumber, String address, String contractNumber, String rank) {
         super(id, firstName, lastName, phoneNumber, address, contractNumber);
         this.rank = rank;
     }
@@ -20,7 +22,7 @@ public class Pilot extends Crew {
         this.rank = rank;
     }
 
-    public String toString(){
+    public String toString() {
         return this.getId() + "/" + this.getFirstName() + "/" + this.getLastName() + "/" + this.getPhoneNumber() + "/" + this.getAddress() + "/" + this.getContractNumber() + "/" + this.getRank();
     }
 }
